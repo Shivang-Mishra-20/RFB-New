@@ -150,6 +150,41 @@
             margin-right: auto;
         }
         
+        /* Hero Section for Centered Content */
+        .hero-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 0;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin: 60px auto;
+            max-width: 1200px;
+            width: 90%;
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(231, 76, 60, 0.1) 0%, rgba(0,0,0,0) 70%);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
         /* About Section Style for Courses */
         .about-section {
             background-color: white;
@@ -393,7 +428,7 @@
         
         /* Responsive Adjustments */
         @media (max-width: 992px) {
-            .about-section {
+            .hero-section, .about-section {
                 padding: 60px 40px;
             }
             
@@ -416,7 +451,7 @@
                 font-size: 2.2rem;
             }
             
-            .about-section {
+            .hero-section, .about-section {
                 padding: 50px 30px;
                 margin: 40px 0;
             }
@@ -448,8 +483,11 @@
                 font-size: 2rem;
             }
             
-            .about-section {
+            .hero-section, .about-section {
                 padding: 40px 25px;
+                width: 100%;
+                border-radius: 0;
+                margin: 30px 0;
             }
             
             .cta-title {
@@ -493,17 +531,24 @@
         </div>
     </nav>
     
+    <!-- Hero Section with Centered Content -->
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2 class="section-title text-center">Our Comprehensive Courses</h2>
+                <p class="text-center section-subtitle">
+                    Choose from our specialized programs designed to help you excel in Defence examinations. 
+                    We have two different type of course duration:<br>
+                    <b>SHORT TERM (1 MONTH COURSE + PRACTICE SESSION)</b><br>
+                    <b>LONG TERM (3 MONTH COURSE + PRACTICE SESSION)</b>
+                </p>
+            </div>
+        </div>
+    </div>
+    
     <!-- Courses Section -->
     <div class="container">
         <div class="about-section">
-            <h2 class="section-title text-center">Our Comprehensive Courses</h2>
-            <p class="text-center section-subtitle">
-                Choose from our specialized programs designed to help you excel in Defence examinations. 
-                We have two different type of course duration:<br>
-                <b>SHORT TERM (1 MONTH COURSE + PRACTICE SESSION)</b><br>
-                <b>LONG TERM (3 MONTH COURSE + PRACTICE SESSION)</b>
-            </p>
-            
             <div class="row">
                 <!-- Card 1: Complete SSB Guidance -->
                 <div class="col-lg-6">
